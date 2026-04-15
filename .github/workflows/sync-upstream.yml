@@ -19,9 +19,10 @@ jobs:
         uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.1
         with:
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-          upstream_repository: shuaiplus/NodeWarden
-          upstream_branch: main
-          target_branch: main
+          # 修正后的参数名如下：
+          upstream_sync_repo: shuaiplus/NodeWarden
+          upstream_sync_branch: main
+          target_sync_branch: main
           test_mode: false
 
       - name: Check for Failure
